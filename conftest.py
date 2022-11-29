@@ -25,7 +25,9 @@ def web_driver_config(config_chrome):
     browser.config.driver = webdriver.Chrome(options=config_chrome)
     return browser.config.driver
 
+
 @pytest.fixture()
 def open_browser(web_driver_config):
     browser.open('https://google.com')
     yield
+
