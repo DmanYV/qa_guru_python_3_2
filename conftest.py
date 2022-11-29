@@ -13,6 +13,13 @@ def config_chrome():
     # options.add_experimental_option('excludeSwitches', ['enable-logging'])
     return options
 
+# Analog
+# @pytest.fixture(scope="class")
+# def open_browser():
+#     browser.config.window_height = 950
+#     browser.config._window_width = 1600
+
+
 @pytest.fixture()
 def web_driver_config(config_chrome):
     browser.config.driver = webdriver.Chrome(options=config_chrome)
